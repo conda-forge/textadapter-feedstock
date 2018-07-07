@@ -12,18 +12,19 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py>=36]
   script: python setup.py install
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - numpy
     - cython
-    - zlib 1.2.8
+    - zlib
     - pcre 8.31
-    - toolchain
 
   run:
     - python
