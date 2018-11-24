@@ -18,19 +18,19 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - numpy
     - cython
-    - zlib 1.2.8
+    - zlib
     - pcre 8.31
-    - toolchain
 
   run:
     - python
-    - numpy
+    - "{{ pin_compatible('numpy', max_pin='1.14.x') }}"
     - pandas
     - six
-    - ordereddict  # [py26]
 
 test:
   requires:
