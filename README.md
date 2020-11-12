@@ -5,11 +5,9 @@ Home: https://github.com/ContinuumIO/TextAdapter
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/textadapter-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python interface to Amazon S3, and large data files
-
-
 
 Current build status
 ====================
