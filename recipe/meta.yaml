@@ -12,13 +12,14 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 1003
   skip: True  # [py>=36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - numpy
@@ -28,7 +29,6 @@ requirements:
 
   run:
     - python
-    - "{{ pin_compatible('numpy', max_pin='1.14.x') }}"
     - pandas
     - six
 
